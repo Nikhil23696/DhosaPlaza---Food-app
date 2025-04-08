@@ -1,0 +1,21 @@
+.orderdetails{
+    display:flex;
+    max-width: 70%;
+    margin:auto;
+    gap:1vmax;
+    margin-top:2vmax;
+    justify-content:space-between;
+    
+}
+.detailsofdetails, .twofour{
+    display:flex;
+    align-items:center;
+    gap:1vmax;
+    margin-top:-1vmax
+}
+.shippingdetails, .orderpayment, .status{
+    margin-top:-1.5vmax
+}
+.orderimg{
+    width:20vmax
+}

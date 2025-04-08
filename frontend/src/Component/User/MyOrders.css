@@ -1,0 +1,26 @@
+.me{
+    display:flex;
+    flex-direction:column;
+    max-width:80%;
+    margin:auto;
+    height:80vh;
+    overflow:auto
+}
+.me1{
+    display:grid;
+    grid-template-columns:1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    background-color:tomato;
+    padding:0.5vmax;
+    position:sticky;
+    top:0
+}
+.me2{
+    display:grid;
+    grid-template-columns:1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    padding:0.5vmax;
+    align-items:center;
+}
+.box:hover{
+   cursor:pointer;
+   color:tomato
+}

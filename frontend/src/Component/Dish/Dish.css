@@ -1,0 +1,42 @@
+.dish{
+    width:90vw;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1vmax;
+}
+.dishcard{
+    width:20vw;
+    height:40vh;
+    border:1px soli rgb(177, 176, 176);
+    box-shadow: 4px 4px 4px 4px rgb(241, 239, 239);
+    padding:1.5vmax;
+    padding-inline:vmax
+}
+.dishcard:hover{
+    cursor:pointer;
+    transform: translateY(-0.5vmax);
+    transition:all 0.3s
+}
+.dishcard>img{
+    width:18vw
+}
+.dishcard>p{
+    margin-top:-1.2vmax
+}
+.bold{
+    margin-top:-0.1vmax;
+    font-weight:bold;
+    color:tomato
+}
+@media screen and (max-width:700px){
+    .dish{
+      display:flex;
+      flex-direction:column;
+      gap:4vmax
+    }
+    .dishcard{
+        width:150vw;
+        margin:auto
+    }
+}

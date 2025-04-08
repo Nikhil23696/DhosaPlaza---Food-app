@@ -1,0 +1,33 @@
+.allmenu{
+    max-width:90%;
+    width:60vw;
+    margin-left: 5vmax;
+}
+.allmenu1,.allmenu2{
+    display:grid;
+    grid-template-columns:1fr 0.5fr 0.5fr 0.5fr 1fr;
+    width:50vw;
+    margin:auto;
+    padding:1vmax;
+    border:1px solid rgb(202, 201, 201)
+}
+.allmenu3{
+    display:flex;
+    gap:0.5vmax;
+    margin-top:1.2vmax
+}
+.svg:hover{
+    cursor:pointer;
+    color: tomato
+}
+.allmenu0{
+    height:80vh;
+    overflow:auto
+}
+.deletemd{
+    margin-top:1vmax
+}
+.deletemd:hover{
+    cursor:pointer;
+    color: tomato
+}

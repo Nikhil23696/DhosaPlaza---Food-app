@@ -1,0 +1,21 @@
+.admin{
+    display:flex;
+    width:100vw;
+    max-width:100%;   
+}
+
+.sidebar{
+    max-width:25%;
+    padding:2vmax;
+    display:flex;
+    flex-direction:column;
+    height: 79vh;
+    background-color:tomato;
+    position:sticky;
+    top:0
+}
+.text{
+    font-size: 1.5vmax;
+    display:flex;
+    gap:1vmax
+}

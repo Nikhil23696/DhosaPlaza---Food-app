@@ -1,0 +1,62 @@
+.home{
+    max-width:100%;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+
+}
+.home>h2{
+    margin-left:45vmax
+}
+.banner{
+    background-color:tomato;
+    height:30vh;
+    width:90vw;
+    margin:auto; 
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:4vmax
+}
+.banner>h3{
+    margin-top:-1vmax
+}
+.banner>h3,h1{
+    color:white
+}
+.inputfield>input{
+    outline:none;
+    border:none;
+    padding:1vmax;
+    width: 30vw
+}
+.inputfield >button{
+    outline:none;
+    border:none;
+    padding:1vmax;
+    background-color:rgba(31, 125, 176, 0.73);
+    font-weight:bold;
+    color:white;
+    font-size:0.79vmax
+}
+@media screen and (max-width:700px){
+    .banner{
+        width:150vw
+    }
+    .banner>h3{
+        display:none
+    }
+    .inputfield>input{
+        width:80vw;
+        padding:2.9vmax
+    }
+    .inputfield>button{
+        padding:2.5vmax;
+        font-size:3vmax
+    }
+    .home>h2{
+        width:55vw;
+        margin-inline:auto;
+        font-size:5vmax
+    }
+}

@@ -1,0 +1,91 @@
+.orderconfirm{
+    display:flex;
+    max-width:90%;
+    background-color:re;
+    margin: auto
+}
+
+.leftorderconfirm{
+    display:flex;
+    flex-direction:column;
+    padding:1vmax;
+    gap:2vmax;
+    width:40vw;
+    margin:2vmax;
+    border-right: 1px solid grey;
+    height:75vh
+}
+.shippingdetails{
+    display:flex;
+    flex-direction:column;
+    gap: 0.5vmax;
+    margin:1vmax
+}
+.detailsofdetails{
+    display:flex;
+    align-items:center;
+    gap:1vmax
+}
+.myshippingdetails{
+    color:grey
+}
+.your1{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:1vmax;
+    
+}
+.yourimg{
+    display:flex;
+    gap:1vmax;
+    align-items:center;
+    flex-direction:column
+}
+.yourimg > img{
+    width:5vmax
+}
+.rightorderconfirm{
+    margin: 10vmax;
+    
+}
+.rightorderconfirm > h2{
+    text-align:center
+}
+.totalorder{
+    display:flex;
+    flex-direction:column;
+    gap:1vmax;
+    margin-top:1vmax;
+    border-top: 1px solid rgb(162, 158, 158);
+    border-bottom: 1px solid rgb(162, 158, 158);
+    padding:1vmax
+}
+.totalorder1{
+    display:flex;
+    align-items:center;
+    justify-content: space-between
+}
+.totalorder1>p{
+    margin-left:1vmax;
+}
+.totalamount{
+    display:flex;
+    justify-content:space-between;
+    margin-top:1vmax;
+    padding:1vmax
+}
+.mybtn{
+    outline:none;
+    background-color:tomato;
+    color:white;
+    padding:0.6vmax;
+    border:1px solid rgb(198, 197, 197);
+    font-weight:bold;
+    transition:all 0.5s;
+    width:15vw
+}
+.mybtn:hover{
+        background-color:rgb(252, 127, 59);
+        cursor:pointer
+}

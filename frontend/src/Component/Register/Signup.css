@@ -1,0 +1,35 @@
+.signup{
+    max-width:100%;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    height: 80vh;
+    justify-content:center;
+}
+.input{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1vmax
+}
+.input>input,select{
+    outline:none;
+    border:1px solid rgb(219, 215, 215);
+    width:30vw;
+    padding:0.7vmax
+}
+.input>select{
+
+}
+.signupform{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1vmax;
+    box-shadow: 10px 10px 10px 10px rgb(244, 242, 242);
+    padding:2vmax
+}
+.sp{
+    color: blue
+}

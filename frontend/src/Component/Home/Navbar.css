@@ -1,0 +1,49 @@
+.nav{
+    max-width:100%;
+    width:100vw;
+    
+ 
+}
+.nav1{
+    display:flex;
+    align-items:center;
+    justify-content:space-around
+}
+.sp1{
+    color:tomato
+}
+.sp2{
+    color: rgba(31, 125, 176, 0.73)
+}
+.nav2,.nav3{
+    display:flex;
+    align-items:center;
+    gap:1vmax;
+    margin-top: 0.5vmax
+}
+.ty:hover{
+cursor:pointer;
+color:rgb(243, 128, 22);
+transition:all 0.5s
+}
+.ty1:hover{
+cursor:pointer;
+color:rgb(243, 128, 22);
+transition:all 0.5s
+}
+.ava:hover{
+    cursor:pointer
+}
+@media screen and (max-width:700px){
+.nav1{
+    display:flex;
+    align-items:center;
+    justify-content:end
+}
+.nav3{
+    margin-left:5vmax
+}
+.ty1{
+    display:none
+}
+}

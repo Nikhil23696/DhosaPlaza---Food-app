@@ -1,0 +1,40 @@
+.menu{
+    max-width:100%;
+    width:100vw;
+    height:100v
+}
+.menu1{
+    width:62vw;
+    margin: auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1vmax;
+}
+.category,.category1{
+    display:flex;
+    align-items:center;
+    gap:0.5vmax;
+    padding-inline:1vmax
+}
+.filter{
+    position:fixed;
+    top:5vmax;
+    width: 15vw;
+    box-shadow: 4px 4px 4px 4px rgb(241, 239, 239);
+    margin-inline: 2vmax
+}
+.filter>h2{
+    margin-left:1vmax
+}
+.filter1{
+    position:fixed;
+    top:33vmax;
+    width: 15vw;
+    box-shadow: 4px 4px 4px 4px rgb(241, 239, 239);
+    margin-inline: 2vmax
+}
+@media screen and (max-width:700px){
+    .filter,.filter1{
+        display:none
+    }
+}

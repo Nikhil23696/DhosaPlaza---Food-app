@@ -1,0 +1,79 @@
+.menudetail{
+    max-width:100%;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+}
+.detail1{
+    width:70vw;
+    margin: auto;
+    display:flex;
+    gap:1vmax;
+    justify-content:space-between;
+    box-shadow: 4px 4px 4px 4px rgb(241, 239, 239);
+    padding:1vmax
+}
+.review{
+    width:30vw;
+    margin-left: 14vmax;
+    display:flex;
+    gap:1vmax;
+    box-shadow: 4px 4px 4px 4px rgb(241, 239, 239);
+    padding:1vmax;
+    margin-top:2vmax;
+}
+.hh{
+    margin-left:14vmax;
+    margin-bottom:-2vmax
+}
+.sp{
+    color:tomato
+}
+.descc{
+    display:flex;
+    align-items:center;
+    gap:0.5vmax;
+    margin-top:-1vmax
+}
+.button{
+    display:flex;
+    align-items:center;
+    gap:0.5vmax  
+}
+.detail2>h1{
+    color:tomato
+}
+.btn{
+    outline:none;
+    background-color:tomato;
+    color:white;
+    padding:0.6vmax;
+    border:1px solid rgb(198, 197, 197);
+    font-weight:bold;
+    transition:all 0.5s
+}
+.btn:hover{
+    background-color:rgb(252, 127, 59);
+    cursor:pointer
+}
+.btag{
+    display:flex;
+    flex-direction:column;
+    gap:0.5vmax
+}
+.btn1{
+    outline:none;
+    background-color:tomato;
+    color:white;
+    padding:0.6vmax;
+    border:1px solid rgb(198, 197, 197);
+    font-weight:bold;
+    transition:all 0.5s;
+    width:10vmax;
+    margin-left:36vmax;
+    margin-bottom:-1.5vmax
+}
+.btn1:hover{
+    background-color:rgb(252, 127, 59);
+    cursor:pointer
+}

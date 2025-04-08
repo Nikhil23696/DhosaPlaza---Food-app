@@ -1,0 +1,8 @@
+.badge{
+    border-radius:50%;
+    padding:0.2vmax;
+    background-color:tomato;
+    color:white;
+    position:absolute;
+    top:-0.1vmax
+}
