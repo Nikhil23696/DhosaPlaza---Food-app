@@ -17,7 +17,7 @@ export const isAuthenticated = async(req,res, next)=>{
             message: 'Invalid token'
         })
     }
-    req.id = decode.userId;
+    req.id = decode.userId; 
     next()
    } catch (error) {
     console.log(error)

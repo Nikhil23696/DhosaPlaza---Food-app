@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Signup.css'
 import { Button, CircularProgress } from '@mui/material'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setAuthUser } from '../../redux/userSlice'
 
 const Login = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const { authUser } = useSelector(store => store.user);
     const dispatch = useDispatch()
     const [input,setInput] = useState({
         email: "",
@@ -43,6 +44,11 @@ const Login = () => {
         }
         
     }
+    useEffect(() => {
+        if (authUser) {
+            navigate("/")
+        }
+    }, [])
     return (
         <>
             <div className="signup">

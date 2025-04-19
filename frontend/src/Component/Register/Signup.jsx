@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Signup.css'
 import { Button, CircularProgress } from '@mui/material'
 import axios from 'axios'
 import {toast} from 'react-toastify'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Signup = () => {
+
+    const navigate = useNavigate();
+    const { authUser } = useSelector(store => store.user);
+
     const [image, setImage] = useState(false)
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -41,6 +46,11 @@ const Signup = () => {
         }
         setLoading(false)
     }
+    useEffect(() => {
+        if (authUser) {
+            navigate("/")
+        }
+    }, [])
 
     return (
         <>

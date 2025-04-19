@@ -5,6 +5,7 @@ import Navbar from './Component/Home/Navbar';
 import axios from 'axios';
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
+import ProtectedRoute from './Component/ProtectedRoute';
 
 const Signup = lazy(() => import('./Component/Register/Signup'));
 const Login = lazy(() => import('./Component/Register/Login'));
@@ -43,26 +44,26 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
-          <Route path='/menu/:id' element={<MenuDetails />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/shiping/details' element={<ShipItems />} />
-          <Route path='/order/confirm' element={<Orderconfirm />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/orders/me' element={<MyOrders />} />
-          <Route path='/orders/:id' element={<OrderDetails />} />
-          <Route path='/success' element={<OrderSuccess/>}/>
+          <Route path='/menu/:id' element={<ProtectedRoute><MenuDetails /></ProtectedRoute>} />
+          <Route path='/cart' element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+          <Route path='/shiping/details' element={<ProtectedRoute><ShipItems /></ProtectedRoute>} />
+          <Route path='/order/confirm' element={<ProtectedRoute><Orderconfirm /></ProtectedRoute>} />
+          <Route path='/profile' element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+          <Route path='/orders/me' element={<ProtectedRoute><MyOrders /></ProtectedRoute>} />
+          <Route path='/orders/:id' element={<ProtectedRoute><OrderDetails /></ProtectedRoute>} />
+          <Route path='/success' element={<ProtectedRoute><OrderSuccess/></ProtectedRoute>}/>
           <Route path='/admin/' element={<Admin />}>
-            <Route path='dashboard' element={<Dashboard />} />
-            <Route path='menu/all' element={<AllMenu />} />
-            <Route path='menu/new' element={<CreateMenu />} />
-            <Route path='orders/all' element={<Orders />} />
+            <Route path='dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path='menu/all' element={<ProtectedRoute><AllMenu /></ProtectedRoute>} />
+            <Route path='menu/new' element={<ProtectedRoute><CreateMenu /></ProtectedRoute>} />
+            <Route path='orders/all' element={<ProtectedRoute><Orders /></ProtectedRoute>} />
           </Route>
           <Route
             path="/process/payment"
             element={
               stripeApiKey ? (
                 <Elements stripe={loadStripe(stripeApiKey)}>
-                  <Payment />
+                  <ProtectedRoute><Payment /></ProtectedRoute>
                 </Elements>
               ) : (
                 <h1>Loading Stripe...</h1>

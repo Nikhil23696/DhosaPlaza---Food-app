@@ -3,7 +3,7 @@ import { deleteMenu, getAllMenu, getMenuDetails, getSingleMenu, newMenu, updateM
 import { authorizeRole, isAuthenticated } from '../middlewares/auth.js';
 import singleUpload from '../middlewares/multer.js'
 import { createReview, deleteReview, getAllReview } from '../controller/reviewController.js';
-
+ 
 const router = express.Router(); 
 
 router.route('/new').post(isAuthenticated, authorizeRole("admin"), singleUpload, newMenu);
