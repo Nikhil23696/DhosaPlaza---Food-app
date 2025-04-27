@@ -14,7 +14,7 @@ const UserMenu = () => {
 
     const handleClose = ()=>{
        dispatch(openUserMenu(null))
-    }
+    } 
     const handleLogout = async()=>{
         console.log("hi")
         const res = await axios.get('http://loalhost:8000/api/v1/user/logout', {

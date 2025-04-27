@@ -3,7 +3,7 @@ import './Navbar.css'
 import { Avatar, Typography } from '@mui/material'
 import { IoCartOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import UserMenu from '../Models/userMenu';
+import UserMenu from '../Models/UserMenu';
 import { useDispatch, useSelector } from 'react-redux';
 import { openUserMenu } from '../../redux/serviceSlice';
 import Badge from '../Badge/Badge';
@@ -14,7 +14,7 @@ const Navbar = () => {
 
     const openMenu =()=>{
         dispatch(openUserMenu(true))
-    }
+    } 
     return (
         <>
             <div className="nav">
