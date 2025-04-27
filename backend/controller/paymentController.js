@@ -9,7 +9,7 @@ export const processPayment = async(req,res)=>{
         const myPayment = await stripe.paymentIntents.create({
             amount: req.body.amount, 
             currency:"usd",
-            metadata:{
+            metadata:{ 
                 company: "Ecommerce"
             },
         });

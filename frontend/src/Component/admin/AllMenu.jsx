@@ -12,7 +12,7 @@ const AllMenu = () => {
 
   const handleDeleteMenu = async(id)=>{
    try {
-        const res = await axios.delete(`http://localhost:8000/api/v1/menu/delete/${id}`,{withCredentials:true})
+        const res = await axios.delete(`http://loalhost:8000/api/v1/menu/delete/${id}`,{withCredentials:true})
         console.log(res.data)
           dispatch(removeMenu(id))
           toast(res.data.message)

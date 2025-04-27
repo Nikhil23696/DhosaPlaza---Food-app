@@ -16,7 +16,8 @@ const UserMenu = () => {
        dispatch(openUserMenu(null))
     }
     const handleLogout = async()=>{
-        const res = await axios.get('http://localhost:8000/api/v1/user/logout', {
+        console.log("hi")
+        const res = await axios.get('http://loalhost:8000/api/v1/user/logout', {
             withCredentials: true
         })
         console.log(res.data.message)

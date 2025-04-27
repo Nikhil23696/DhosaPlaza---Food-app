@@ -89,3 +89,8 @@
         background-color:rgb(252, 127, 59);
         cursor:pointer
 }
+@media screen and (max-width: 600px) {
+    .leftorderconfirm,.shippingInfo,.yourcartitems{
+        display:none
+    }
+}

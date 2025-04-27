@@ -29,7 +29,7 @@ const Signup = () => {
             myForm.set("role", role);
             if (image) myForm.append("file", image);
 
-            const res = await axios.post('http://localhost:8000/api/v1/user/register', myForm, {
+            const res = await axios.post('http://loalhost:8000/api/v1/user/register', myForm, {
                 headers: { 'Content-Type': 'multipart/form-data' },
                 withCredentials: true
             });

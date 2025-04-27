@@ -27,7 +27,6 @@ connectDB();
 const PORT = process.env.PORT;
 const app = express();   
 
-
 // middlewares
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -50,5 +49,5 @@ app.use(cors({
  })
 
 app.listen(PORT, () => {
-    console.log(`{Server is listening on PORT: ${PORT}}`)
-});  
+    console.log(`{Server is listening on PORT: ${PORT}}`) 
+});    

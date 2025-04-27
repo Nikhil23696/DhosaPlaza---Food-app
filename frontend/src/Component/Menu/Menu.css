@@ -36,5 +36,8 @@
 @media screen and (max-width:700px){
     .filter,.filter1{
         display:none
+    },
+    .dishcard>img{
+         width:20vw
     }
 }

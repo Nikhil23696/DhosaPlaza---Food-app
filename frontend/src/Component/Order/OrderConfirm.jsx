@@ -10,7 +10,7 @@ const Orderconfirm = () => {
     const price = Number(item.price) || 0;  
     const quantity = Number(item.quantity) || 1;  
     return total + price * quantity;
-}, 0);
+}, 0); 
 
   const shippingPrice = totalPrice > 200 ? 50 : 0
   return (

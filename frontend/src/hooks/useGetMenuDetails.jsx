@@ -9,7 +9,7 @@ const useGetMenuDetails = (id)=>{
         const fetchMenuDetails = async()=>{
             try {
                 axios.defaults.withCredentials = true
-                const res = await axios.get(`http://localhost:8000/api/v1/menu/${id}`)
+                const res = await axios.get(`http://loalhost:8000/api/v1/menu/${id}`)
                 dispatch(getMenuDetails(res.data.menu))
             } catch (error) {
                 console.log(error)

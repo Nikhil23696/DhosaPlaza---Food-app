@@ -6,9 +6,6 @@ import cloudinary from 'cloudinary'
 export const newMenu = async (req, res) => {
     try {
 
-        console.log("Request Body:", req.body);
-        console.log("Uploaded File:", req.file);
-
         const file = req.file;
         const fileUri = getDataUri(file);
         const myCloud = await cloudinary.v2.uploader.upload(fileUri.content)
@@ -31,7 +28,6 @@ export const newMenu = async (req, res) => {
             }
 
         })
-        console.log(menu)
         res.status(201).json({
             success: true,
             menu
@@ -126,9 +122,9 @@ export const updateMenu = async (req, res) => {
         })
         res.status(200).json({
             success: true,
-            menu
+            menu 
         })
     } catch (error) {
-        console.log(error)
+        console.log(error) 
     }
 }

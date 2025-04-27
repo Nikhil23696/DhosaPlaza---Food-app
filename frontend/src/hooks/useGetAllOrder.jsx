@@ -9,7 +9,7 @@ const useGetAllMenu = ()=>{
         const fetchMenu = async()=>{
             try {
                 axios.defaults.withCredentials = true
-                const res = await axios.get('http://localhost:8000/api/v1/order/all')
+                const res = await axios.get('http://loalhost:8000/api/v1/order/all')
                 dispatch(getAdminOrders(res.data.orders))
             } catch (error) {
                 console.log(error)
