@@ -14,7 +14,7 @@ const Orders = () => {
 
   const handleDeleteOrder = async(id) =>{
     try {
-      const res = await axios.delete(`http://loalhost:8000/api/v1/order/delete/${id}`)
+      const res = await axios.delete(`https://dhosaplaza.onrender.com/api/v1/order/delete/${id}`)
        dispatch(removeOrder(id))
       console.log(res.data)
       toast.success(res.data.message)

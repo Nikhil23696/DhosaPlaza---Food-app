@@ -8,7 +8,7 @@ const Banner = () => {
     const handleSearch = async()=>{
         try {
            
-            const res = await axios.get(`http://loalhost:8000/api/v1/menu/all?search=${search}`, {withCredentials: true})
+            const res = await axios.get(`https://dhosaplaza.onrender.com/api/v1/menu/all?search=${search}`, {withCredentials: true})
             console.log(res.data)
         } catch (error) {
             console.log(error)

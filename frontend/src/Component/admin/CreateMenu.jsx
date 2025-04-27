@@ -49,7 +49,7 @@ const CreateMenu = () => {
     e.preventDefault();
     try {
       console.log("before res")
-      const res = await axios.post('http://loalhost:8000/api/v1/menu/new', myForm, {
+      const res = await axios.post('https://dhosaplaza.onrender.com/api/v1/menu/new', myForm, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },

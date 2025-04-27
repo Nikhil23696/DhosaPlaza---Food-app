@@ -17,7 +17,7 @@ const UserMenu = () => {
     } 
     const handleLogout = async()=>{
         console.log("hi")
-        const res = await axios.get('http://loalhost:8000/api/v1/user/logout', {
+        const res = await axios.get('https://dhosaplaza.onrender.com/api/v1/user/logout', {
             withCredentials: true
         })
         console.log(res.data.message)

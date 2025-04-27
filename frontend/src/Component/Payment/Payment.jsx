@@ -42,7 +42,7 @@ const Payment = () => {
 
         try {
 
-            const res = await axios.post('http:///api/v1/order/payment/process', paymentData, {
+            const res = await axios.post('https://dhosaplaza.onrender.com/api/v1/order/payment/process', paymentData, {
                 headers: { 'Content-Type': 'application/json' },
                 withCredentials: true
             })
@@ -90,7 +90,7 @@ const Payment = () => {
                         totalPrice
                     };
                     try {
-                    const orderRes = await axios.post('http://loalhost:8000/api/v1/order/new', order, {
+                    const orderRes = await axios.post('https://dhosaplaza.onrender.com/api/v1/order/new', order, {
                             headers: { "Content-Type": "application/json" },
                             withCredentials: true
                         })
