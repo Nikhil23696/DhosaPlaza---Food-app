@@ -40,7 +40,7 @@ app.use(cors({
  
 //api  
  app.use('/api/v1/user', userRoute);
- app.use('/api/v1/menu', menuRoute);  
+ app.use('/api/v1/menu', menuRoute);   
  app.use('/api/v1/order', orderRoute);  
 
  app.use(express.static(path.join(__dirname, "../frontend/dist")));

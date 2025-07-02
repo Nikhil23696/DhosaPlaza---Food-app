@@ -22,11 +22,12 @@ const Login = () => {
         e.preventDefault();
         setLoading(true)
         try {
-           
+           console.log("hi")
             const res = await axios.post('https://dhosaplaza.onrender.com/api/v1/user/login', input,{
                 headers: { 'Content-Type': 'application/json' },
                 withCredentials: true
             });
+            console.log("hi2")
             if (res.data.success) {
                dispatch(setAuthUser(res.data.user))
                 toast.success(res.data.message)

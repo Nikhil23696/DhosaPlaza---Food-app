@@ -30,7 +30,7 @@ function App() {
 
   const [stripeApiKey, setStripeApiKey] = useState("");
   async function getStripeApiKey() {
-    const { data } = await axios.get('http://loalhost:8000/api/v1/order/stripeapikey', { withCredentials: true })
+    const { data } = await axios.get('https://dhosaplaza.onrender.com/api/v1/order/stripeapikey', { withCredentials: true })
     setStripeApiKey(data.stripeApiKey)
   }
   getStripeApiKey()
