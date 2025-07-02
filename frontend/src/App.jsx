@@ -6,6 +6,7 @@ import axios from 'axios';
 import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import ProtectedRoute from './Component/ProtectedRoute';
+import { useEffect } from 'react';
 
 const Signup = lazy(() => import('./Component/Register/Signup'));
 const Login = lazy(() => import('./Component/Register/Login'));
@@ -29,11 +30,22 @@ const MenuDetails = lazy(() => import('./Component/MenuDetails/MenuDetails'));
 function App() {
 
   const [stripeApiKey, setStripeApiKey] = useState("");
-  async function getStripeApiKey() {
-    const { data } = await axios.get('https://dhosaplaza.onrender.com/api/v1/order/stripeapikey', { withCredentials: true })
-    setStripeApiKey(data.stripeApiKey)
+  useEffect(() => {
+  async function fetchStripeKey() {
+    try {
+      const { data } = await axios.get('https://dhosaplaza.onrender.com/api/v1/order/stripeapikey', { withCredentials: true });
+      setStripeApiKey(data.stripeApiKey);
+    } catch (error) {
+      console.error("Stripe key fetch failed:", error);
+    }
   }
-  getStripeApiKey()
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  if (user) {
+    fetchStripeKey();
+  }
+}, []);
+
 
   return (
     <>
